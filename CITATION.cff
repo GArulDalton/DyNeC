@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the accompanying article."
+title: "DyNeC, Noisy Label Detection and Correction by Consensus of Training Dynamics and Latent Neighbourhoods"
+authors:
+  - family-names: Arul Dalton
+    given-names: G.
+    orcid: "https://orcid.org/0000-0002-5981-7176"
+    affiliation: "Saveetha Engineering College, Chennai, India"
+  - family-names: Sankar
+    given-names: P.
+    orcid: "https://orcid.org/0009-0008-0986-4493"
+    affiliation: "Saveetha Engineering College, Chennai, India"
+repository-code: "https://github.com/GArulDalton/DyNeC"
+license: MIT
