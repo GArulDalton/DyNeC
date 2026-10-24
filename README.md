@@ -2,7 +2,7 @@
 
 Code, raw results and figure scripts for the article
 
-> G. Arul Dalton and P. Sankar. *Noisy Label Detection and Correction by Consensus of Training Dynamics and Latent Neighbourhoods.* Submitted to *Data Mining and Knowledge Discovery* (Springer).
+> G. Arul Dalton and P. Sankar. *Noisy Label Detection and Correction by Consensus of Training Dynamics and Latent Neighbourhoods.* Submitted to *Knowledge and Information Systems* (Springer).
 
 DyNeC estimates, for every training sample, the probability that its label is correct by fusing
 

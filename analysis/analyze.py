@@ -61,19 +61,19 @@ if all(f'fmnist|{z}|{m}' in tab for z in NZ for m in METH):
         ax.bar(x+(j-3)*W,mu,W,yerr=sd,capsize=1.5,label=MN[m],color=plt.cm.tab10(j) if m!='dynec' else '#c0392b',edgecolor='k',lw=0.3)
     ax.set_xticks(x); ax.set_xticklabels([NN[z] for z in NZ],fontsize=8.5); ax.set_title(DN[d]); ax.set_ylim(30,100); ax.grid(axis='y',alpha=.3)
   axs[0].set_ylabel('Test accuracy (%)'); axs[-1].legend(fontsize=7.2,loc='lower left',ncol=2)
-  plt.tight_layout(); plt.savefig('fig3_accuracy.png',dpi=200); plt.close()
+  plt.tight_layout(); plt.savefig('results/check_fig3_accuracy.png',dpi=200); plt.close()
 if S['curve']:
   plt.figure(figsize=(6,3.8))
   for j,m in enumerate(['ce','gce','apl','smallloss','dynec']):
     if m in S['curve']: plt.plot(np.arange(1,len(S['curve'][m])+1),np.array(S['curve'][m])*100,label=MN[m],lw=2.2 if m=='dynec' else 1.4,color='#c0392b' if m=='dynec' else None)
   plt.axvline(5,ls='--',c='gray',lw=1); plt.text(5.3,40,'end of warm-up',fontsize=8,color='gray')
   plt.xlabel('Epoch'); plt.ylabel('Test accuracy (%)'); plt.title('Fashion-MNIST, 50% symmetric noise'); plt.legend(fontsize=8); plt.grid(alpha=.3)
-  plt.tight_layout(); plt.savefig('fig5_curves.png',dpi=200); plt.close()
+  plt.tight_layout(); plt.savefig('results/check_fig5_curves.png',dpi=200); plt.close()
 if det:
   keys=[k for k in det]; fig,ax=plt.subplots(figsize=(11,3.6)); x=np.arange(len(keys)); W=0.2
   for j,(f,lab,c) in enumerate([('smallloss','Small-loss GMM','#7f8c8d'),('dyn_only','Temporal view only','#e67e22'),('nbr_only','Spatial view only','#27ae60'),('dynec','DyNeC fused $w_i$','#c0392b')]):
     ax.bar(x+(j-1.5)*W,[det[k][f] for k in keys],W,label=lab,color=c,edgecolor='k',lw=.3)
   ax.set_xticks(x); ax.set_xticklabels([DN[k.split('|')[0]].replace('Fashion-MNIST','F-MNIST')+'\n'+NN[k.split('|')[1]] for k in keys],fontsize=7.5)
   ax.set_ylim(50,100); ax.set_ylabel('Noise-detection AUROC (%)'); ax.legend(fontsize=8,ncol=4,loc='lower center'); ax.grid(axis='y',alpha=.3)
-  plt.tight_layout(); plt.savefig('fig4_detection.png',dpi=200); plt.close()
+  plt.tight_layout(); plt.savefig('results/check_fig4_detection.png',dpi=200); plt.close()
 print(len(R),'records')

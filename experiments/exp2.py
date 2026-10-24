@@ -1,7 +1,7 @@
 import sys,os
 sys.path.insert(0,os.path.join(os.path.dirname(os.path.abspath(__file__)),'..','dynec'))
 os.chdir(os.path.join(os.path.dirname(os.path.abspath(__file__)),'..','results'))
-# Additional DMKD experiments: (a) ENN data-cleaning baseline, (b) downstream transfer of cleaned/corrected labels
+# Additional experiments: (a) ENN data-cleaning baseline, (b) downstream transfer of cleaned/corrected labels
 import core,json,time,os,numpy as np,warnings; warnings.filterwarnings('ignore')
 from sklearn.linear_model import LogisticRegression
 OUT='results2.jsonl'; done=set()
